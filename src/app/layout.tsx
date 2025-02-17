@@ -1,8 +1,8 @@
-const RootLayout = ({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) => {
+import { FC, ReactNode } from 'react';
+
+const RootLayout: FC<{
+  children: ReactNode;
+}> = ({ children }) => {
   return (
     <html lang="en">
       <body>{children}</body>
