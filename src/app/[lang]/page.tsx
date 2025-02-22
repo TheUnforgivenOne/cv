@@ -1,4 +1,5 @@
 import ExperienceBlock from '@/components/ExperienceBlock';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 import Section from '@/components/Section';
 import { getTranslation } from '@/i18n';
 import { FC } from 'react';
@@ -18,6 +19,7 @@ const Home: FC<HomeProps> = async ({ params }) => {
       <div style={{ width: '100%' }}>Photo</div>
 
       <div style={{ display: 'flex' }}>
+        <LanguageSwitcher lang={lang} />
         <div>
           <h1>{t('name')}</h1>
           <h2>{t('jobTitle')}</h2>
