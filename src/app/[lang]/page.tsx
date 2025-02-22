@@ -1,16 +1,26 @@
 import ExperienceBlock from '@/components/ExperienceBlock';
 import Section from '@/components/Section';
+import { getTranslation } from '@/i18n';
 import { FC } from 'react';
 
-const Home: FC = () => {
+interface HomeProps {
+  params: Promise<{
+    lang: string;
+  }>;
+}
+
+const Home: FC<HomeProps> = async ({ params }) => {
+  const lang = (await params).lang;
+  const { t } = await getTranslation(lang);
+
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '35% 65%', width: '100%' }}>
       <div style={{ width: '100%' }}>Photo</div>
 
       <div style={{ display: 'flex' }}>
         <div>
-          <h1>Vladislav Potapov</h1>
-          <h2>Senior Software Engineer</h2>
+          <h1>{t('name')}</h1>
+          <h2>{t('jobTitle')}</h2>
         </div>
         <ul>
           <li>potapowvlad@gmail.com</li>
