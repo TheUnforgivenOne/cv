@@ -1,12 +1,12 @@
 {
   "name": "Владислав Потапов",
   "jobTitle": "Senior Software Engineer",
-  "contacts": [
-    "potapowvlad@gmail.com",
-    "phone",
-    "linkedin",
-    "github"
-  ],
+  "contacts": {
+    "email": "potapowvlad@gmail.com",
+    "phone": "+381 65 9221 327",
+    "LinkedIn": "vladislav-potapov-00b552259",
+    "GitHub": "TheUnforgivenOne"
+  },
   "summary": {
     "title": "Обо мне",
     "text": "Программист с 4+ годами опыта работы с JavaScript, React и облачными вычислениями. Увлечен архитектурой решений и современными технологиями. Подтвержденный опыт руководства командами, настройки CI/CD и разработки масштабируемых веб-приложений."

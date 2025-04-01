@@ -1,5 +1,8 @@
 import { FC, ReactNode } from 'react';
+import { Inter } from 'next/font/google';
 import { languages } from '@/i18n/config';
+
+const font = Inter({ subsets: ['cyrillic', 'latin'], weight: ['400', '700'] });
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
@@ -17,7 +20,7 @@ const RootLayout: FC<RootLayoutProps> = async ({ children, params }) => {
 
   return (
     <html lang={lang}>
-      <body>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 };

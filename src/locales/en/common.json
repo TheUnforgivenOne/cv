@@ -1,12 +1,12 @@
 {
   "name": "Vladislav Potapov",
   "jobTitle": "Senior Software Engineer",
-  "contacts": [
-    "potapowvlad@gmail.com",
-    "phone",
-    "linkedin",
-    "github"
-  ],
+  "contacts": {
+    "email": "potapowvlad@gmail.com",
+    "phone": "+381 65 9221 327",
+    "LinkedIn": "vladislav-potapov-00b552259",
+    "GitHub": "TheUnforgivenOne"
+  },
   "summary": {
     "title": "Summary",
     "text": "Senior Software Engineer with 4+ years of experience in JavaScript, React, and cloud computing. Passionate about solution architecture and modern technologies. Proven expertise in leading teams, configuring CI/CD, and developing scalable web applications."

@@ -1,9 +1,14 @@
 import ExperienceBlock from '@/components/ExperienceBlock';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import List from '@/components/List';
+import PrintButton from '@/components/PrintButton';
 import Section from '@/components/Section';
 import { getTranslation } from '@/i18n';
+import Image from 'next/image';
 import { FC } from 'react';
+import profilePicture from '../../../public/profilePicture.jpeg';
+import styles from './page.module.css';
+import Contacts from '@/components/Contacts';
 
 interface HomeProps {
   params: Promise<{
@@ -16,29 +21,30 @@ const Home: FC<HomeProps> = async ({ params }) => {
   const { t } = await getTranslation(lang);
 
   return (
-    <div
-      style={{ display: 'grid', gridTemplateColumns: '35% 65%', width: '100%' }}
-    >
-      <div style={{ width: '100%' }}>Photo</div>
+    <div className={styles.cvPageWrapper}>
+      <LanguageSwitcher lang={lang} />
+      <PrintButton />
 
-      <div style={{ display: 'flex' }}>
-        <LanguageSwitcher lang={lang} />
+      <Image src={profilePicture} alt="profile picture" className={styles.profilePicture} />
 
-        <div>
-          <h1>{t('name')}</h1>
-          <h2>{t('jobTitle')}</h2>
-        </div>
+      <div className={`${styles.contentBlock} ${styles.mainInfoBlock}`}>
+        <Contacts items={t('contacts', { returnObjects: true })} />
 
-        <List items={t('contacts', { returnObjects: true })} />
-      </div>
+        <h1>{t('name')}</h1>
+        <h2>{t('jobTitle')}</h2>
 
-      <div>
         <Section title={t('summary.title')}>
           <p>{t('summary.text')}</p>
         </Section>
+      </div>
 
+      <div className={styles.contentBlock}>
         <Section title={t('keySkills.title')}>
           <List items={t('keySkills.list', { returnObjects: true })} />
+        </Section>
+
+        <Section title={t('languages.title')}>
+          <List items={t('languages.list', { returnObjects: true })} />
         </Section>
 
         <Section title={t('education.title')}>
@@ -52,13 +58,9 @@ const Home: FC<HomeProps> = async ({ params }) => {
             />
           ))}
         </Section>
-
-        <Section title={t('languages.title')}>
-          <List items={t('languages.list', { returnObjects: true })} />
-        </Section>
       </div>
 
-      <div>
+      <div className={styles.contentBlock}>
         <Section title={t('workExperience.title')}>
           {t('workExperience.list', { returnObjects: true }).map((expItem) => (
             <ExperienceBlock
