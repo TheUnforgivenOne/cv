@@ -1,6 +1,8 @@
 :root {
   --global-text-color: #333;
   --secondary-text-color: #999;
+  --white-text-color: #fff;
+  --background-color: lightblue;
 }
 
 body {

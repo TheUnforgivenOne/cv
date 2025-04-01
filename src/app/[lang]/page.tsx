@@ -9,6 +9,7 @@ import { FC } from 'react';
 import profilePicture from '../../../public/profilePicture.jpeg';
 import styles from './page.module.css';
 import Contacts from '@/components/Contacts';
+import BadgeList from '@/components/BadgeList';
 
 interface HomeProps {
   params: Promise<{
@@ -74,7 +75,7 @@ const Home: FC<HomeProps> = async ({ params }) => {
               <h4>{t('workExperience.achievementsTitle')}</h4>
               <List items={expItem.details.achievements} />
               <h4>{t('workExperience.stackTitle')}</h4>
-              <List items={expItem.details.stack} />
+              <BadgeList items={expItem.details.stack} />
             </ExperienceBlock>
           ))}
         </Section>

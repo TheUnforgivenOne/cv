@@ -1,0 +1,13 @@
+.bageList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 12px;
+  color: var(--white-text-color);
+  background-color: var(--background-color);
+}
