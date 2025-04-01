@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react';
+import styles from './experienceBlock.module.css';
 
 interface ExperienceBlockProps {
   title: string;
@@ -12,10 +13,13 @@ const ExperienceBlock: FC<ExperienceBlockProps> = ({ title, children, company, l
   return (
     <article>
       <h4>{title}</h4>
-      {duration && <div>{duration}</div>}
-      {company && <span>{company}</span>}
-      {location && <span>, {location}</span>}
+      <div className={styles.secondaryInfo}>
+        {duration && <div>{duration}</div>}
+        {company && <span>{company}</span>}
+        {location && <span>, {location}</span>}
+      </div>
       {children}
+      <hr />
     </article>
   );
 };

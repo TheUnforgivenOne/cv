@@ -70,10 +70,10 @@ const Home: FC<HomeProps> = async ({ params }) => {
               location={expItem.location}
               duration={expItem.duration}
             >
-              <div>{expItem.details.project}</div>
-              <div>{t('workExperience.achievementsTitle')}</div>
+              <p>{expItem.details.project}</p>
+              <h4>{t('workExperience.achievementsTitle')}</h4>
               <List items={expItem.details.achievements} />
-              <div>{t('workExperience.stackTitle')}</div>
+              <h4>{t('workExperience.stackTitle')}</h4>
               <List items={expItem.details.stack} />
             </ExperienceBlock>
           ))}

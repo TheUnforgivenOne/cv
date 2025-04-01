@@ -8,7 +8,7 @@ interface LanguageSwitcherProps {
 
 const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ lang }) => {
   return (
-    <div>
+    <div className="noPrint">
       <div>{lang}</div>
       {languages
         .filter((l) => l !== lang)
