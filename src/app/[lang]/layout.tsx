@@ -5,9 +5,9 @@ import './globals.css';
 
 const font = Inter({ subsets: ['cyrillic', 'latin'], weight: ['400', '700'] });
 
-export async function generateStaticParams() {
-  return languages.map((lng) => ({ lng }));
-}
+export const generateStaticParams = async () => {
+  return languages.map((lang) => ({ lang }));
+};
 
 interface RootLayoutProps {
   children: ReactNode;
