@@ -31,7 +31,7 @@ const CVPage: FC<CVPageProps> = async ({ params }) => {
       <LanguageSwitcher lang={lang} />
       <PrintButton />
 
-      <Image src={profilePicture} alt="profile picture" className={styles.profilePicture} />
+      <Image src={profilePicture} alt="profile picture" className={styles.profilePicture} unoptimized />
 
       <div className={`${styles.contentBlock} ${styles.mainInfoBlock}`}>
         <Contacts items={t('contacts', { returnObjects: true })} />

@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
   basePath: `/${projectName}`,
-  // assetPrefix: `/${projectName}/`,
 };
 
 export default nextConfig;
