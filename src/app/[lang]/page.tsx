@@ -1,23 +1,28 @@
 import ExperienceBlock from '@/components/ExperienceBlock';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
 import List from '@/components/List';
-import PrintButton from '@/components/PrintButton';
 import Section from '@/components/Section';
 import { getTranslation } from '@/i18n';
 import Image from 'next/image';
 import { FC } from 'react';
+import { languages } from '@/i18n/config';
 import profilePicture from '../../../public/profilePicture.jpeg';
 import styles from './page.module.css';
 import Contacts from '@/components/Contacts';
 import BadgeList from '@/components/BadgeList';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import PrintButton from '@/components/PrintButton';
 
-interface HomeProps {
+interface CVPageProps {
   params: Promise<{
     lang: string;
   }>;
 }
 
-const Home: FC<HomeProps> = async ({ params }) => {
+export const generateStaticParams = async () => {
+  return languages.map((lang) => ({ lang }));
+};
+
+const CVPage: FC<CVPageProps> = async ({ params }) => {
   const lang = (await params).lang;
   const { t } = await getTranslation(lang);
 
@@ -84,4 +89,4 @@ const Home: FC<HomeProps> = async ({ params }) => {
   );
 };
 
-export default Home;
+export default CVPage;
