@@ -5,7 +5,7 @@ import { getTranslation } from '@/i18n';
 import Image from 'next/image';
 import { FC } from 'react';
 import { languages } from '@/i18n/config';
-import profilePicture from '../../../public/profilePicture.jpeg';
+import profilePicture from '/public/profilePicture.jpeg';
 import styles from './page.module.css';
 import Contacts from '@/components/Contacts';
 import BadgeList from '@/components/BadgeList';
