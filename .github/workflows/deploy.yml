@@ -27,6 +27,8 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /cv
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
