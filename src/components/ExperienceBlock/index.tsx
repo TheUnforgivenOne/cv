@@ -13,13 +13,12 @@ const ExperienceBlock: FC<ExperienceBlockProps> = ({ title, children, company, l
   return (
     <article>
       <h4>{title}</h4>
-      <div className={styles.secondaryInfo}>
-        {duration && <div>{duration}</div>}
-        {company && <span>{company}</span>}
-        {location && <span>, {location}</span>}
+      <div>
+        {company && <h4 className={styles.experienceCompany}>{company}</h4>}
+        {duration && <span className={styles.experienceSecondary}>🕒 {duration}</span>}
+        {location && <span className={styles.experienceSecondary}>📍 {location}</span>}
       </div>
       {children}
-      <hr />
     </article>
   );
 };

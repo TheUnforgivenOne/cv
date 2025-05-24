@@ -1,12 +1,13 @@
 :root {
-  --global-text-color: #333;
-  --secondary-text-color: #999;
-  --white-text-color: #fff;
-  --background-color: lightblue;
+  --black-color: #333;
+  --white-color: #fff;
+  --main-theme-color: #3fa0ff;
+  --main-light-theme-color: #6fc6ff;
+  --secondary-theme-color: #999;
 }
 
 body {
-  color: var(--global-text-color);
+  color: var(--black-color);
 }
 
 h1,
@@ -20,6 +21,8 @@ h6 {
 
 @media print {
   body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
     font-size: 12px;
   }
 

@@ -1,24 +1,34 @@
 .cvPageWrapper {
-  display: grid;
-  grid-template-columns: 30% 70%;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.contentBlock {
-  padding: 0 16px;
+.mainInfoBlock {
+  display: grid;
+  grid-template-columns: 30% 70%;
 }
 
-.mainInfoBlock {
+@media (max-width: 640px) {
+  .mainInfoBlock {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contentBlock {
+  padding: 16px;
+}
+
+.titleBlock {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 16px;
 }
 
 .profilePicture {
   width: 100%;
   height: auto;
-  margin-top: 16px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }

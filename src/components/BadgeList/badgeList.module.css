@@ -6,8 +6,8 @@
 
 .badge {
   display: inline-block;
-  padding: 0.5em 1em;
-  border-radius: 12px;
-  color: var(--white-text-color);
-  background-color: var(--background-color);
+  padding: 4px 8px;
+  border-radius: 16px;
+  color: var(--white-color);
+  background-color: var(--main-light-theme-color);
 }

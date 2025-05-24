@@ -1,3 +1,12 @@
-.secondaryInfo {
-  color: var(--secondary-text-color);
+.experience {
+  padding-bottom: 16px;
+}
+
+.experienceCompany {
+  color: var(--main-theme-color);
+}
+
+.experienceSecondary {
+  color: var(--secondary-theme-color);
+  margin-right: 8px;
 }
