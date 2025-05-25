@@ -1,5 +1,6 @@
+'use client';
 import { FC } from 'react';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { languages } from '@/i18n/config';
 
 interface LanguageSwitcherProps {
@@ -7,17 +8,22 @@ interface LanguageSwitcherProps {
 }
 
 const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ lang }) => {
+  const router = useRouter();
+
   return (
-    <div className="noPrint">
-      <div>{lang}</div>
-      {languages
-        .filter((l) => l !== lang)
-        .map((l) => (
-          <Link key={l} href={`/${l}`}>
-            {l}
-          </Link>
-        ))}
-    </div>
+    <select
+      value={lang}
+      onChange={(e) => {
+        const selectedLang = e.target.value;
+        router.push(`/${selectedLang}`);
+      }}
+    >
+      {languages.map((l) => (
+        <option key={l} value={l}>
+          {l}
+        </option>
+      ))}
+    </select>
   );
 };
 

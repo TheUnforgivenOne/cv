@@ -28,51 +28,55 @@ const CVPage: FC<CVPageProps> = async ({ params }) => {
 
   return (
     <div className={styles.cvPageWrapper}>
-      <LanguageSwitcher lang={lang} />
-      <PrintButton />
-
-      <div className={styles.titleBlock}>
-        <h1>{t('name')}</h1>
-        <h2>{t('jobTitle')}</h2>
-
-        <Contacts items={t('contacts', { returnObjects: true })} />
+      <div className={styles.utilsBlock}>
+        <PrintButton lang={lang} />
+        <LanguageSwitcher lang={lang} />
       </div>
 
-      <div className={styles.mainInfoBlock}>
-        <div className={styles.contentBlock}>
-          <Image src={profilePicture} alt="profile picture" className={styles.profilePicture} unoptimized />
+      <div id="cv">
+        <div className={styles.titleBlock}>
+          <h1>{t('name')}</h1>
+          <h2>{t('jobTitle')}</h2>
 
-          <Section title={t('summary.title')}>
-            <p>{t('summary.text')}</p>
-          </Section>
-
-          <Section title={t('keySkills.title')}>
-            <BadgeList items={t('keySkills.list', { returnObjects: true })} />
-          </Section>
-
-          <Section title={t('languages.title')}>
-            <List items={t('languages.list', { returnObjects: true })} />
-          </Section>
-
-          <Section title={t('education.title')}>
-            {t('education.list', { returnObjects: true }).map((eduItem) => (
-              <ExperienceBlock key={eduItem.duration} {...eduItem} />
-            ))}
-          </Section>
+          <Contacts items={t('contacts', { returnObjects: true })} />
         </div>
 
-        <div className={styles.contentBlock}>
-          <Section title={t('workExperience.title')}>
-            {t('workExperience.list', { returnObjects: true }).map((expItem) => (
-              <ExperienceBlock key={expItem.duration} {...expItem}>
-                <p>{expItem.details.project}</p>
-                <h4>{t('workExperience.achievementsTitle')}</h4>
-                <List items={expItem.details.achievements} />
-                <h4>{t('workExperience.stackTitle')}</h4>
-                <BadgeList items={expItem.details.stack} />
-              </ExperienceBlock>
-            ))}
-          </Section>
+        <div className={styles.mainInfoBlock}>
+          <div className={styles.contentBlock}>
+            <Image src={profilePicture} alt="profile picture" className={styles.profilePicture} unoptimized />
+
+            <Section title={t('summary.title')}>
+              <p>{t('summary.text')}</p>
+            </Section>
+
+            <Section title={t('keySkills.title')}>
+              <BadgeList items={t('keySkills.list', { returnObjects: true })} />
+            </Section>
+
+            <Section title={t('languages.title')}>
+              <List items={t('languages.list', { returnObjects: true })} />
+            </Section>
+
+            <Section title={t('education.title')}>
+              {t('education.list', { returnObjects: true }).map((eduItem) => (
+                <ExperienceBlock key={eduItem.duration} {...eduItem} />
+              ))}
+            </Section>
+          </div>
+
+          <div className={styles.contentBlock}>
+            <Section title={t('workExperience.title')}>
+              {t('workExperience.list', { returnObjects: true }).map((expItem) => (
+                <ExperienceBlock key={expItem.duration} {...expItem}>
+                  <p>{expItem.details.project}</p>
+                  <h4>{t('workExperience.achievementsTitle')}</h4>
+                  <List items={expItem.details.achievements} />
+                  <h4>{t('workExperience.stackTitle')}</h4>
+                  <BadgeList items={expItem.details.stack} />
+                </ExperienceBlock>
+              ))}
+            </Section>
+          </div>
         </div>
       </div>
     </div>
