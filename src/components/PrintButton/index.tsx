@@ -1,6 +1,5 @@
 'use client';
 import { FC } from 'react';
-import html2pdf from 'html2pdf.js';
 import styles from './printButton.module.css';
 
 interface PrintButtonProps {
@@ -8,9 +7,11 @@ interface PrintButtonProps {
 }
 
 const PrintButton: FC<PrintButtonProps> = ({ lang }) => {
-  const onPrint = () => {
+  const onPrint = async () => {
     const originalCVPage = document.getElementById('cv');
     if (!originalCVPage) return;
+
+    const html2pdf = (await import('html2pdf.js')).default;
 
     const cvPage = originalCVPage.cloneNode(true);
 
