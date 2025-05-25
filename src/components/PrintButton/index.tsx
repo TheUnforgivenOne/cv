@@ -7,7 +7,7 @@ interface PrintButtonProps {
   lang: string;
 }
 
-const PrintButton: FC<PrintButtonProps> = () => {
+const PrintButton: FC<PrintButtonProps> = ({ lang }) => {
   const onPrint = () => {
     const originalCVPage = document.getElementById('cv');
     if (!originalCVPage) return;
@@ -17,9 +17,11 @@ const PrintButton: FC<PrintButtonProps> = () => {
     const styledCVPage = document.createElement('div');
     styledCVPage.style.fontSize = '12px';
     styledCVPage.appendChild(cvPage);
-    console.log(styledCVPage);
 
-    html2pdf(styledCVPage);
+    html2pdf(styledCVPage, {
+      filename: `CV_Vladislav_Potapov_${lang}`,
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    });
   };
 
   return (
