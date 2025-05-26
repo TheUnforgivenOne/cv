@@ -19,10 +19,14 @@ const PrintButton: FC<PrintButtonProps> = ({ lang }) => {
     styledCVPage.style.fontSize = '12px';
     styledCVPage.appendChild(cvPage);
 
+    document.querySelectorAll('style, link[rel="stylesheet"]').forEach((node) => {
+      styledCVPage.appendChild(node.cloneNode(true));
+    });
+
     html2pdf(styledCVPage, {
       filename: `CV_Vladislav_Potapov_${lang}`,
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-      pagebreak: { avoid: ['.section'] },
+      pagebreak: { mode: ['avoid-all', 'css'] },
     });
   };
 

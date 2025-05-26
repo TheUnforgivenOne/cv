@@ -58,16 +58,16 @@ const CVPage: FC<CVPageProps> = async ({ params }) => {
             </Section>
 
             <Section title={t('education.title')}>
-              {t('education.list', { returnObjects: true }).map((eduItem) => (
-                <ExperienceBlock key={eduItem.duration} {...eduItem} />
+              {t('education.list', { returnObjects: true }).map((eduItem, index, list) => (
+                <ExperienceBlock key={eduItem.duration} {...eduItem} isLast={index === list.length - 1} />
               ))}
             </Section>
           </div>
 
           <div className={styles.contentBlock}>
             <Section title={t('workExperience.title')}>
-              {t('workExperience.list', { returnObjects: true }).map((expItem) => (
-                <ExperienceBlock key={expItem.duration} {...expItem}>
+              {t('workExperience.list', { returnObjects: true }).map((expItem, index, list) => (
+                <ExperienceBlock key={expItem.duration} {...expItem} isLast={index === list.length - 1}>
                   <p>{expItem.details.project}</p>
                   <h4>{t('workExperience.achievementsTitle')}</h4>
                   <List items={expItem.details.achievements} />

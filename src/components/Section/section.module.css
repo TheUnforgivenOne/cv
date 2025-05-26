@@ -10,7 +10,3 @@
 .section>:not(h3):not(hr):not(ul) {
   padding: .5rem 0;
 }
-
-.section> :not(h3):not(hr):not(:last-child) {
-  border-bottom: 2px dashed var(--secondary-theme-color);
-}
