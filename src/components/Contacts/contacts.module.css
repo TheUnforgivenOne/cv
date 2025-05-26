@@ -1,5 +1,6 @@
 .contacts {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 8px;
@@ -11,13 +12,13 @@
 }
 
 .contacts svg {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.125em;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: -0.125rem;
 }
 
 .contacts>div {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: .5rem;
 }

@@ -2,16 +2,15 @@
   width: 100%;
 }
 
-.sectionDivider {
+.section>hr {
   border: 1px solid var(--black-color);
   margin: 0;
 }
 
-.children {
-  padding: 8px 0;
+.section>:not(h3):not(hr):not(ul) {
+  padding: .5rem 0;
 }
 
-.children> :not(:last-child) {
+.section> :not(h3):not(hr):not(:last-child) {
   border-bottom: 2px dashed var(--secondary-theme-color);
-  padding-bottom: 16px;
 }

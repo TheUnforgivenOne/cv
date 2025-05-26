@@ -10,8 +10,8 @@ const Section: FC<SectionProps> = ({ title, children }) => {
   return (
     <section className={styles.section}>
       <h3>{title}</h3>
-      <hr className={styles.sectionDivider} />
-      <div className={styles.children}>{children}</div>
+      <hr />
+      {children}
     </section>
   );
 };

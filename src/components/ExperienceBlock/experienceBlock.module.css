@@ -1,12 +1,16 @@
-.experience {
-  padding-bottom: 16px;
+.experience>p {
+  margin: 0;
+  padding: .5rem 0;
 }
 
 .experienceCompany {
   color: var(--main-theme-color);
+  padding: .5rem 0 0;
 }
 
 .experienceSecondary {
   color: var(--secondary-theme-color);
-  margin-right: 16px;
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
 }
