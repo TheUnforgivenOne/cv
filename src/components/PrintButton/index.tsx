@@ -8,6 +8,14 @@ interface PrintButtonProps {
 
 const PrintButton: FC<PrintButtonProps> = ({ lang }) => {
   const onPrint = async () => {
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent) || window.innerWidth < 768;
+    if (isMobile) {
+      setTimeout(() => {
+        window.print();
+      }, 100);
+      return;
+    }
+
     const originalCVPage = document.getElementById('cv');
     if (!originalCVPage) return;
 

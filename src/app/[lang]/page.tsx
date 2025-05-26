@@ -28,7 +28,7 @@ const CVPage: FC<CVPageProps> = async ({ params }) => {
 
   return (
     <div className={styles.cvPageWrapper}>
-      <div className={styles.utilsBlock}>
+      <div className={`${styles.utilsBlock} noPrint`}>
         <PrintButton lang={lang} />
         <LanguageSwitcher lang={lang} />
       </div>
@@ -41,7 +41,7 @@ const CVPage: FC<CVPageProps> = async ({ params }) => {
           <Contacts items={t('contacts', { returnObjects: true })} />
         </div>
 
-        <div className={styles.mainInfoBlock}>
+        <div id="mainInfoBlock" className={styles.mainInfoBlock}>
           <div className={styles.contentBlock}>
             <Image src={profilePicture} alt="profile picture" className={styles.profilePicture} unoptimized />
 

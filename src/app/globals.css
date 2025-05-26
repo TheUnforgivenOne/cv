@@ -30,3 +30,21 @@ p {
   margin: 0;
   padding: 0;
 }
+
+@media print {
+  body {
+    width: 794px;
+    font-size: 12px;
+  }
+
+  .noPrint {
+    display: none !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  #mainInfoBlock {
+    display: grid !important;
+    grid-template-columns: 1fr 2fr !important;
+  }
+}
