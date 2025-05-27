@@ -1,4 +1,6 @@
 .printButton {
+  text-decoration: none;
+  text-align: center;
   background-color: var(--main-theme-color);
   opacity: 90%;
   color: var(--white-color);

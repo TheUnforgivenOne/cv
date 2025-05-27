@@ -7,41 +7,10 @@ interface PrintButtonProps {
 }
 
 const PrintButton: FC<PrintButtonProps> = ({ lang }) => {
-  const onPrint = async () => {
-    const isMobile = /Mobi|Android/i.test(navigator.userAgent) || window.innerWidth < 768;
-    if (isMobile) {
-      setTimeout(() => {
-        window.print();
-      }, 100);
-      return;
-    }
-
-    const originalCVPage = document.getElementById('cv');
-    if (!originalCVPage) return;
-
-    const html2pdf = (await import('html2pdf.js')).default;
-
-    const cvPage = originalCVPage.cloneNode(true);
-
-    const styledCVPage = document.createElement('div');
-    styledCVPage.style.fontSize = '12px';
-    styledCVPage.appendChild(cvPage);
-
-    document.querySelectorAll('style, link[rel="stylesheet"]').forEach((node) => {
-      styledCVPage.appendChild(node.cloneNode(true));
-    });
-
-    html2pdf(styledCVPage, {
-      filename: `CV_Vladislav_Potapov_${lang}`,
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-      pagebreak: { mode: ['avoid-all', 'css'] },
-    });
-  };
-
   return (
-    <button onClick={onPrint} className={styles.printButton}>
+    <a href={`CV_Vladislav_Potapov_${lang}.pdf`} download className={styles.printButton}>
       Save as PDF
-    </button>
+    </a>
   );
 };
 
