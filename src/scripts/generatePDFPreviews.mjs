@@ -30,6 +30,8 @@ for (const lang of LANGS) {
 
   await page.goto(url, { waitUntil: 'networkidle0' });
 
+  await page.waitForTimeout(1000);
+
   await page.pdf({
     path: pdfPath,
     format: 'A4',
