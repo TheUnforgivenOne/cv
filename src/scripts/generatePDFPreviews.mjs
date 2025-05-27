@@ -17,7 +17,9 @@ await new Promise((resolve) => server.listen(PORT, resolve));
 
 console.log(`Serving ${OUT_DIR} at http://localhost:${PORT}`);
 
-const browser = await puppeteer.launch();
+const browser = await puppeteer.launch({
+  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+});
 const page = await browser.newPage();
 
 for (const lang of LANGS) {
