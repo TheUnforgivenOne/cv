@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "generate:pdf": "node src/scripts/generatePDFPreviews.mjs",
-    "generate:pdf:dev": "node src/scripts/generatePDFPreviews.mjs --dev",
     "dev": "next dev",
-    "build": "next build && yarn generate:pdf",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },

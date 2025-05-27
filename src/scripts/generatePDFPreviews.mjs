@@ -3,10 +3,8 @@ import { createServer } from 'http-server';
 import { mkdirSync } from 'fs';
 import { join } from 'path';
 
-const isDev = process.argv.includes('--dev');
-
 const OUT_DIR = 'out';
-const PDF_DIR = isDev ? 'public' : OUT_DIR;
+const PDF_DIR = 'public';
 const PORT = 3000;
 const LANGS = ['en', 'ru'];
 
@@ -17,10 +15,7 @@ await new Promise((resolve) => server.listen(PORT, resolve));
 
 console.log(`Serving ${OUT_DIR} at http://localhost:${PORT}`);
 
-const browser = await puppeteer.launch({
-  headless: true,
-  args: ['--no-sandbox'],
-});
+const browser = await puppeteer.launch();
 const page = await browser.newPage();
 
 for (const lang of LANGS) {
