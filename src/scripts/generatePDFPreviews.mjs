@@ -18,7 +18,8 @@ await new Promise((resolve) => server.listen(PORT, resolve));
 console.log(`Serving ${OUT_DIR} at http://localhost:${PORT}`);
 
 const browser = await puppeteer.launch({
-  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  headless: true,
+  args: ['--no-sandbox'],
 });
 const page = await browser.newPage();
 
@@ -30,13 +31,10 @@ for (const lang of LANGS) {
 
   await page.goto(url, { waitUntil: 'networkidle0' });
 
-  await page.waitForTimeout(1000);
-
   await page.pdf({
     path: pdfPath,
     format: 'A4',
     printBackground: true,
-    // margin: { top: '20mm', bottom: '20mm', left: '15mm', right: '15mm' },
   });
 
   console.log(`Saved to: ${pdfPath}`);
