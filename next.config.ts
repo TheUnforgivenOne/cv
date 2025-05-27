@@ -4,6 +4,10 @@ const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
   basePath: process.env.NEXT_PUBLIC_BASE_PATH ?? '',
+  devIndicators: {
+    buildActivity: false,
+    appIsrStatus: false
+  },
 };
 
 export default nextConfig;

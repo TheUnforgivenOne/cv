@@ -8,7 +8,7 @@ const LANGS = ['en', 'ru'];
 
 mkdirSync(PDF_DIR, { recursive: true });
 
-const browser = await puppeteer.launch();
+const browser = await puppeteer.launch({ headless: 'new' });
 const page = await browser.newPage();
 
 for (const lang of LANGS) {
@@ -17,10 +17,7 @@ for (const lang of LANGS) {
 
   console.log(`Generating PDF for: ${url}`);
 
-  await page.setViewport({ width: 1200, height: 900 });
   await page.goto(url, { waitUntil: 'networkidle0' });
-
-  await new Promise((resolve) => setTimeout(resolve, 2000));
 
   await page.pdf({
     path: pdfPath,
