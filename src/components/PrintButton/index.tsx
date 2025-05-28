@@ -1,4 +1,3 @@
-'use client';
 import { FC } from 'react';
 import styles from './printButton.module.css';
 
