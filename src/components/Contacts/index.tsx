@@ -3,7 +3,7 @@ import styles from './contacts.module.css';
 
 enum ContactKey {
   email = 'email',
-  phone = 'phone',
+  telegram = 'Telegram',
   linkedin = 'LinkedIn',
   github = 'GitHub',
 }
@@ -12,6 +12,7 @@ interface ContactsProps {
   items: { [key in ContactKey]: string };
 }
 
+const telegramUrl = 'https://t.me/';
 const linkedinUrl = 'https://linkedin.com/in/';
 const githubUrl = 'https://github.com/';
 
@@ -25,9 +26,13 @@ const Contacts: FC<ContactsProps> = ({ items }) => {
         icon = '✉️';
         content = <a href={`mailto:${value}`}>{value}</a>;
         break;
-      case ContactKey.phone:
-        icon = '📞';
-        content = <a href={`tel:${value}`}>{value}</a>;
+      case ContactKey.telegram:
+        icon = (
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#229ED9" width="100%" height="100%">
+            <path d="M22.162 2.229a1.5 1.5 0 0 0-1.59-.217L2.7 9.76c-1.03.41-1.02 1.89.02 2.28l4.37 1.62 2.02 6.37c.29.92 1.47 1.09 1.98.26l2.77-4.36 4.46 3.29c.86.64 2.09.18 2.33-.85l3.13-13.13a1.5 1.5 0 0 0-.56-1.67zM9.93 15.19l-1.29-4.07 7.92-5.01-6.63 6.13zm2.09 3.46-1.01-3.18 2.03-1.87-1.02 5.05zm7.13-1.13-3.97-2.93 5.02-7.92-1.05 10.85z" />
+          </svg>
+        );
+        content = <a href={telegramUrl + value}>{ContactKey.telegram}</a>;
         break;
       case ContactKey.linkedin:
         icon = (
@@ -60,7 +65,7 @@ const Contacts: FC<ContactsProps> = ({ items }) => {
 
     return (
       <div key={key}>
-        {icon} {content}
+        {icon}{content}
       </div>
     );
   });

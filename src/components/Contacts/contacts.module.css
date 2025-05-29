@@ -20,5 +20,5 @@
 .contacts>div {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 4px;
 }
