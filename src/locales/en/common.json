@@ -9,17 +9,19 @@
   },
   "summary": {
     "title": "Summary",
-    "text": "Senior Software Engineer with 4+ years of experience in JavaScript, React, and cloud computing. Passionate about solution architecture and modern technologies. Proven expertise in leading teams, configuring CI/CD, and developing scalable web applications."
+    "text": "Frontend engineer with 5 years of experience building scalable web applications (SPA, SSR, SSG) using modern JavaScript/TypeScript frameworks. Proven expertise in technical leadership, CI/CD implementation, and deploying solutions in AWS environments. Currently focused on enhancing architectural skills and leveraging cloud technologies."
   },
   "keySkills": {
     "title": "Key Skills",
     "list": [
+      "TypeScript",
       "React",
       "Redux",
       "GraphQL",
-      "Nextjs",
+      "Next.js",
       "AWS",
-      "CI/CD"
+      "Jenkins",
+      "Terraform"
     ]
   },
   "education": {
@@ -42,13 +44,13 @@
   "languages": {
     "title": "Languages",
     "list": [
-      "Russian - native",
+      "Russian - Native",
       "English - B2"
     ]
   },
   "workExperience": {
     "title": "Work Experience",
-    "achievementsTitle": "Key achievements",
+    "achievementsTitle": "Achievements",
     "stackTitle": "Tech stack",
     "list": [
       {
@@ -57,19 +59,20 @@
         "location": "Belgrade, Serbia",
         "duration": "Feb 2024 – present",
         "details": {
-          "project": "A pack of web apps to ship drugs across medical alboratories",
+          "project": "A set of web applications and services for managing and transporting chemical substances between medical research laboratories.",
           "achievements": [
-            "Led a team of frontend developers",
-            "Created and unified CI/CD to deliver all frontend apps to the AWS ECS",
-            "Organised 2 legacy apps rewriting into modern tech stack (React)",
-            "Proposed and finalised an idea for a new web app, it's still under development"
+            "Led a team of 3 frontend developers, delivering and maintaining key React and Next.js applications",
+            "Built a unified CI/CD pipeline using Jenkins and Terraform for seamless deployment of all frontend apps to AWS ECS",
+            "Initiated and led the migration of two legacy applications to a modern tech stack (React + Redux)",
+            "Proposed and scoped a new web application, which was approved by the client and moved to active development"
           ],
           "stack": [
             "React",
+            "Next.js",
             "Redux",
             "Jenkins",
+            "Terraform",
             "AWS",
-            "Cypress",
             "TypeScript"
           ]
         }
@@ -78,13 +81,13 @@
         "title": "Senior Frontend Developer",
         "company": "EPAM Systems",
         "location": "Istanbul, Turkey",
-        "duration": "Dec 2022 – Mar 2024",
+        "duration": "Dec 2022 – Mar 2024 (1 yr 4 mos)",
         "details": {
-          "project": "Pack of applications to model entities relations across medical laboratories (e.g. Animal -> has -> Cage -> has -> Number) using tree graph, find and load all coincidences of this model across real databases, register new entities in any connected databases.",
+          "project": "Set of web applications for modeling relationships between database entities in medical research labs (e.g., Animal → has → Cage → has → Number) using a tree-graph editor. The system also enables entity creation and editing within connected databases.",
           "achievements": [
-            "Formed tech stack, organized monorepo with ui kit",
-            "Configured and integrated AAD for all web apps",
-            "Created abstract tree graph builder using Canvas"
+            "Defined the tech stack and organized a monorepo (Yarn workspaces) with a custom UI Kit, speeding up development across apps",
+            "Developed a performant canvas-based (React-flow) tree graph editor for modeling complex relationships",
+            "Integrated Azure Active Directory for secure authentication across all applications"
           ],
           "stack": [
             "React",
@@ -98,17 +101,18 @@
       {
         "title": "Middle Frontend Developer",
         "company": "EPAM Systems",
-        "location": "St. Peterburg, Russia",
+        "location": "St. Peterburg, Russia (1 yr 2 mos)",
         "duration": "Nov 2021 – Dec 2022",
         "details": {
-          "project": "App for searching diseases on CT and XRAY screenings using neural network. Frontend part included DICOM images web-viewer that allowed to see and compare original CT or XRAY images (or series of images) with the same images but includes AI findings. This viewer has many functionality, such as layout generation, placing images / images series to the particular layout window, synchronization between layout windows, images transformation, painting etc",
+          "project": "Web application for detecting diseases in CT and X-ray scans using a neural network.",
           "achievements": [
-            "Created DICOM web-viewer",
-            "Created abstract solution for forms and tables",
-            "Significantly improved code reusability during refactoring"
+            "Developed a universal system for rendering forms and tables based on JSON schemas, improving reusability and maintainability",
+            "Created a DICOM web viewer (Cornerstone.js) for comparing, annotating, and analyzing medical scans",
+            "Refactored and optimized architecture to improve component reuse and page load times"
           ],
           "stack": [
             "React",
+            "Next.js",
             "Redux",
             "Cornerstone.js",
             "React Final Form",
@@ -120,13 +124,13 @@
         "title": "Junior Frontend Developer",
         "company": "EPAM Systems",
         "location": "St. Peterburg, Russia",
-        "duration": "Nov 2020 – Dec 2021",
+        "duration": "Nov 2020 – Dec 2021 (1 yr 2 mos)",
         "details": {
-          "project": "Frontend of app for tracking drugs fulfillment and their shipment inside laboratories. This project was a copy of legacy Marioneoe + Backbone app.",
+          "project": "Web application for tracking chemical shipments between research labs. The goal was to rewrite a legacy Marionette + Backbone app with modern technologies and improve performance.",
           "achievements": [
-            "Actively participated in tech stack forming and creating app architecture",
-            "Built the whole app",
-            "Covered app with e2e tests"
+            "Actively contributed to the technology stack selection (React, Redux, Recoil) and architecture planning",
+            "Implemented full test coverage with Cypress (e2e) and RTL (unit tests)",
+            "Participated in the development cycle from planning to production release"
           ],
           "stack": [
             "React",
@@ -143,11 +147,11 @@
         "location": "St. Peterburg, Russia",
         "duration": "Jul 2020 – Oct 2020",
         "details": {
-          "project": "Application to track people movements inside buildings",
+          "project": "Web app for tracking people movement within buildings.",
           "achievements": [
-            "Extended functionality to track people moves in real time",
-            "Unified app architecture to switch between map providers",
-            "Integrated OSM provider"
+            "Expanded real-time tracking functionality using WebSockets",
+            "Unified the application architecture to support different map providers (OSM, Google Maps API)",
+            "Integrated OpenStreetMap provider"
           ],
           "stack": [
             "React",
