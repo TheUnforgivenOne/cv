@@ -6,12 +6,13 @@
 .selectBox {
   display: flex;
   align-items: center;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border: 1px solid var(--secondary-theme-color);
   border-radius: 4px;
   cursor: pointer;
   justify-content: space-between;
   gap: 4px;
+  background-color: var(--white-color);
 }
 
 .selectBox:hover,
@@ -37,6 +38,7 @@
   text-decoration: none;
   text-align: center;
   color: var(--black-color);
+  background-color: var(--white-color);
 }
 
 .option:hover {

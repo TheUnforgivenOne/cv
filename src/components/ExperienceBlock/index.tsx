@@ -14,7 +14,7 @@ const ExperienceBlock: FC<ExperienceBlockProps> = ({ title, company, location, d
   return (
     <article className={styles.experience}>
       <h4>{title}</h4>
-      <h4 className={styles.experienceCompany}>{company}</h4>
+      <div className={styles.experienceCompany}>{company}</div>
       <div className={styles.experienceSecondary}>
         <span>🕒 {duration}</span>
         <span>📍 {location}</span>

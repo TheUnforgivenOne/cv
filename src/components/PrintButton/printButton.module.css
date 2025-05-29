@@ -14,8 +14,8 @@
   display: inline-block;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  min-width: 200px;
   font-weight: 700;
+  width: fit-content;
 }
 
 .printButton:hover,

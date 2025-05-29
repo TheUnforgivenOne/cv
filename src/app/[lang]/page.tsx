@@ -33,7 +33,7 @@ const CVPage: FC<CVPageProps> = async ({ params }) => {
         <LanguageSwitcher lang={lang} />
       </div>
 
-      <div id="cv">
+      <div className={styles.cvContent}>
         <div className={styles.titleBlock}>
           <h1>{t('name')}</h1>
           <h2>{t('jobTitle')}</h2>
