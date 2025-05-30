@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
-const font = Inter({ subsets: ['cyrillic', 'latin'], weight: ['400', '700'], display: 'swap' });
+const font = Inter({ subsets: ['cyrillic', 'latin'], weight: ['400', '600', '800'], display: 'swap' });
 
 interface RootLayoutProps {
   children: ReactNode;

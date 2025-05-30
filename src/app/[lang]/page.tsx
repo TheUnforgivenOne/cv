@@ -46,7 +46,9 @@ const CVPage: FC<CVPageProps> = async ({ params }) => {
             <Image src={profilePicture} alt="profile picture" className={styles.profilePicture} unoptimized />
 
             <Section title={t('summary.title')}>
-              <p>{t('summary.text')}</p>
+              {t('summary.text', { returnObjects: true }).map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
             </Section>
 
             <Section title={t('keySkills.title')}>

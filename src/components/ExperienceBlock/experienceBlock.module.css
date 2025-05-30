@@ -4,13 +4,11 @@
 }
 
 .experience>p {
-  margin: 0;
-  padding: .5rem 0;
+  margin: .5rem 0;
 }
 
 .experience>hr {
-  margin: 0;
-  padding-top: .5rem;
+  margin: .5rem 0 0;
   border: none;
   border-bottom: 2px dashed var(--secondary-theme-color);
 }

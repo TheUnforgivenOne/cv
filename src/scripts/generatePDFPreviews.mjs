@@ -23,6 +23,7 @@ for (const lang of LANGS) {
     path: pdfPath,
     format: 'A4',
     printBackground: true,
+    preferCSSPageSize: true,
   });
 
   console.log(`Saved to: ${pdfPath}`);

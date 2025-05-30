@@ -8,5 +8,5 @@
 }
 
 .section>:not(h3):not(hr):not(ul) {
-  padding: .5rem 0;
+  margin: .5rem 0;
 }

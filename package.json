@@ -10,7 +10,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "html2pdf.js": "^0.9.3",
     "i18next": "^24.2.2",
     "i18next-resources-to-backend": "^1.2.1",
     "next": "15.1.7",
